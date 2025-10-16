@@ -62,7 +62,8 @@ btn.addEventListener("click", async (evt) => {
   const data = await res.json();
   const rate = data[from][to];
   console.log(rate);
-  let total = amtVal * rate;
+  let total = (amtVal * rate).toFixed(2);
   console.log(total);
   msg.innerText = `${amtVal} ${fromCurr.value} = ${total} ${toCurr.value}`;
 });
+
